@@ -2,8 +2,8 @@
   "name": "reelfake-api",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/server.js",
-  "bin": "dist/server.js",
+  "main": "dist/server.cjs",
+  "bin": "dist/server.cjs",
   "scripts": {
     "dev": "tsx watch ./src/server.ts",
     "build": "webpack --config webpack.config.ts --mode production"

@@ -17,9 +17,12 @@ const config: Configuration = {
   module: {
     rules: [
       {
-        test: /.ts?$/,
-        use: "ts-loader",
-        exclude: /node_modules/,
+        test: /.ts$/,
+        loader: "esbuild-loader",
+        options: {
+          loader: "ts",
+          target: "esnext",
+        },
       },
     ],
   },
@@ -27,7 +30,7 @@ const config: Configuration = {
     extensions: [".ts", ".js"],
   },
   output: {
-    filename: "bundle.js",
+    filename: "server.js",
     path: path.resolve(__dirname, "dist"),
   },
   devtool: "source-map",
